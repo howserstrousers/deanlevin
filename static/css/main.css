@@ -1,0 +1,98 @@
+*{
+	padding-right:0px;
+}
+
+html{
+	font-size: 12px;
+	text-transform: uppercase;
+  	font-weight:bold;
+}
+
+body {
+	background-color:#f2f2f2;
+	padding-right:0px;
+
+}
+
+li {
+	list-style-type: none;
+}
+
+#head{
+	margin:0 auto;
+	max-width: 400px;
+}
+
+#webintro{
+}
+
+#webintro p{
+
+}
+
+#nav{
+	padding-left: 7%;
+	border-left: 3px solid black
+}
+
+#nav p{
+
+}
+
+#nav2 p{
+	margin:0 auto;
+	float:left;
+	margin-right:5%;
+
+}
+
+#introtext{
+	margin-top:10%;
+	font-weight: normal;
+	letter-spacing: 1px
+}
+
+.allwork{
+	color:blue;
+}
+
+.year{
+	margin-right: 0;
+	color:red;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.year:hover {
+	color:white;
+	background-color: red;
+}
+
+#zone14{
+	margin-top:5%;
+}
+
+#zone15{
+	margin-top:5%;
+}
+
+.buttons{
+	margin-bottom: 3%;
+}
+
+.buttons a{
+	font-size: 1.4rem;
+	color: black;
+}
+
+.right{
+	margin-left: 3%;
+}
+
+.myCap{
+	line-height: 0.7rem;
+}
+
+img{
+	width:100%;
+}
