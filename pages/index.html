@@ -19,7 +19,7 @@
 
 {% block content %}
 <div class="row" id="head">
-  <div class="col-xs-7 col-xs-offset-1 gutter-bottom-1" id="webintro">
+  <div class="col-xs-7 col-xs-offset-1 gutter-bottom-1 year" id="webintro" data-child="intro">
     <p>Dean Levin — 1988</p>
     <p>Johannesburg, South Africa</p>
     <p>Based in New York City</p>
@@ -29,32 +29,34 @@
 
     <p class="allwork">1,</p>
 
-    <p class="year" data-linkedto="#zone14">14,</p>
+    <p class="year" id="fourteen" data-child="zone14">14,</p>
 
-    <p class="year" data-linkedto="#zone15">15,</p>
+    <p class="year" id="fifteen" data-child="zone15">15,</p>
 
-    <p class="year">16,</p>
+    <p class="year" id="sixteen" data-child="zone16">16,</p>
     
-    <p class="year">17,</p>
-    
+    <p class="year" id='seventeen'>17,</p>
+
+    <p class="year" id="fritz" data-child="chowder">
+      clams
+    </p>
+
     <p class="year">CV</p>
     <p>Books</p>
     <p>Contact</p>
   </div>
 </div>
 
-    <div class="col-xs-10 col-xs-offset-1" id="introtext">
+    
+
+
+<div class="zone">
+
+  <div class="col-xs-10 col-xs-offset-1" id="intro" data-active="true">
       <p>
       {{ cms.introtext.paragraph_text }}
       <p>
     </div>
-
-
-
-
-
-
-<div class="zone">
   
     <div id="zone14" class="row">
 
@@ -108,8 +110,27 @@
           </div>
           {% endfor %}
     </div>
+
+    <div id="chowder">
+      bitches
+    </div>
   </div>
 
+
+
+
+
+
+<!--
+/**
+To add a new toggle:
+
+ 1. Add an html element that when you click it, it toggles    something.  For example your list with 14, 15.
+  2. Give this element the class 'year'
+  3.  Give it 'data-child="CHILDID"' where CHILDID is the id of the element you want to toggle on and off every time you click the parent.
+  4. make sure the child element has the same id as the id you're giving the parent's data-child
+  -->
+  
 
 
 

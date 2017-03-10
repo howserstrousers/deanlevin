@@ -35,7 +35,34 @@ var capIndex = 1;
     }
 
 $(document).ready(function(){ 
-    $(".year").on("click", function(e) {  
-        $(".zone").toggle();
-    });
+    toggleFourteenHandler();
+    //$(".year").on("click", function(e) {  
+      
+        //$(".zone").toggle();
+   // });
 });
+
+function toggleFourteenHandler() {
+  $(".year").on("click", function(e){
+    var idToActive = e.currentTarget.dataset.child;
+    addActive(idToActive);
+  })
+}
+
+function addActive(id) {
+  removeActive();
+  var node = $("#" + id); 
+  node.attr("data-active", "true")
+  node.show();
+}
+
+function removeActive() {
+  var activeNode = $('*[data-active="true"]')
+  activeNode.hide();
+  activeNode.attr("data-active", "false");
+}
+
+function childActive(id) {
+  var child = $("#" + id);
+  return child.data().active === "true"
+}

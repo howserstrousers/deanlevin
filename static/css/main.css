@@ -70,10 +70,15 @@ li {
 
 #zone14{
 	margin-top:5%;
+	display: none;
+}
+#chowder{
+	display: none;
 }
 
 #zone15{
 	margin-top:5%;
+	display: none;
 }
 
 .buttons{
