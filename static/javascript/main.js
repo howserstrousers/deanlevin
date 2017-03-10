@@ -45,7 +45,12 @@ $(document).ready(function(){
 function toggleFourteenHandler() {
   $(".year").on("click", function(e){
     var idToActive = e.currentTarget.dataset.child;
-    addActive(idToActive);
+    debugger;
+    if(childActive(idToActive)) {
+      removeActive();
+    } else {
+       addActive(idToActive);
+    }
   })
 }
 
@@ -63,6 +68,5 @@ function removeActive() {
 }
 
 function childActive(id) {
-  var child = $("#" + id);
-  return child.data().active === "true"
+  return $("#" + id)[0] == $('*[data-active="true"]')[0];
 }
